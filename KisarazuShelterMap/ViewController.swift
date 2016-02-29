@@ -60,7 +60,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         shelter = readCSV("hinan")
         
         // shelterに格納された情報を元にピンを設置
-        setPins(shelter, pinColor: UIColor.redColor())
+        setPins(shelter, pinColor: UIColor.blueColor())
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,6 +103,28 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 
     }
     
+    // アノテーション（ピン）の表示に関する設定
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        let reuseId = "pin"
+        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+        if pinView == nil {
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            
+            let colorPointAnnotation = annotation as! ColorPointAnnotation
+            pinView?.pinTintColor = colorPointAnnotation.pinColor
+            pinView?.animatesDrop = true
+        }
+        else {
+            pinView?.annotation = annotation
+        }
+        
+        return pinView
+    }
+    
     // CSVファイルを読み込みディクショナリ形式で返す
     func readCSV(fileName: String) -> [[String: String]] {
         if let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "csv") {
@@ -128,7 +150,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             let lat = NSString(string: point["latitude"]!).doubleValue
             let lng = NSString(string: point["longitude"]!).doubleValue
             // ピンのインスタンスを生成
-            let pin: MKPointAnnotation = MKPointAnnotation()
+            let pin = ColorPointAnnotation(pinColor: pinColor)
             // ピンの座標を設定
             pin.coordinate = CLLocationCoordinate2DMake(lat, lng)
             // ピンをタップした時に表示されるもの

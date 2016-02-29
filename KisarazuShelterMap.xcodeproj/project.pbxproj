@@ -15,6 +15,7 @@
 		12D9BD271C843FA90021DFE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D9BD251C843FA90021DFE5 /* LaunchScreen.storyboard */; };
 		12D9BD2F1C84433C0021DFE5 /* hinan.csv in Resources */ = {isa = PBXBuildFile; fileRef = 12D9BD2E1C84433C0021DFE5 /* hinan.csv */; };
 		12D9BD311C8443410021DFE5 /* ichijihinan.csv in Resources */ = {isa = PBXBuildFile; fileRef = 12D9BD301C8443410021DFE5 /* ichijihinan.csv */; };
+		12D9BD351C84B6750021DFE5 /* ColorPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D9BD341C84B6750021DFE5 /* ColorPointAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		12D9BD281C843FA90021DFE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12D9BD2E1C84433C0021DFE5 /* hinan.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = hinan.csv; path = ../../../Dropbox/knct/DJ2/OpenData/kisarazu/hinan.csv; sourceTree = "<group>"; };
 		12D9BD301C8443410021DFE5 /* ichijihinan.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ichijihinan.csv; path = ../../../Dropbox/knct/DJ2/OpenData/kisarazu/ichijihinan.csv; sourceTree = "<group>"; };
+		12D9BD341C84B6750021DFE5 /* ColorPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPointAnnotation.swift; sourceTree = "<group>"; };
 		C0E3BD7BBF66506B9FD15894 /* Pods_KisarazuShelterMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KisarazuShelterMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C803C554E77D98EAC82063 /* Pods-KisarazuShelterMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KisarazuShelterMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KisarazuShelterMap/Pods-KisarazuShelterMap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +83,7 @@
 				12D9BD231C843FA90021DFE5 /* Assets.xcassets */,
 				12D9BD251C843FA90021DFE5 /* LaunchScreen.storyboard */,
 				12D9BD281C843FA90021DFE5 /* Info.plist */,
+				12D9BD341C84B6750021DFE5 /* ColorPointAnnotation.swift */,
 			);
 			path = KisarazuShelterMap;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12D9BD1F1C843FA90021DFE5 /* ViewController.swift in Sources */,
+				12D9BD351C84B6750021DFE5 /* ColorPointAnnotation.swift in Sources */,
 				12D9BD1D1C843FA90021DFE5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
