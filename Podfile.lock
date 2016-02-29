@@ -1,0 +1,19 @@
+PODS:
+  - SwiftCSV (0.2.2)
+
+DEPENDENCIES:
+  - SwiftCSV (from `git@github.com:naoty/SwiftCSV.git`)
+
+EXTERNAL SOURCES:
+  SwiftCSV:
+    :git: git@github.com:naoty/SwiftCSV.git
+
+CHECKOUT OPTIONS:
+  SwiftCSV:
+    :commit: a7f60376bd26a8c9c2212f4f752c65a935dc906d
+    :git: git@github.com:naoty/SwiftCSV.git
+
+SPEC CHECKSUMS:
+  SwiftCSV: 29106dc25a7eca542a80486ae7f0ee19ccd37b9f
+
+COCOAPODS: 0.39.0
