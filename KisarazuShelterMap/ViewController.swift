@@ -117,6 +117,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             let colorPointAnnotation = annotation as! ColorPointAnnotation
             pinView?.pinTintColor = colorPointAnnotation.pinColor
             pinView?.animatesDrop = true
+            pinView?.canShowCallout = true
         }
         else {
             pinView?.annotation = annotation
