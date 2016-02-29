@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5FD03760904F2EA96040BBF4'
+               BlueprintIdentifier = '2420FCC0F12279F24C7B4535'
                BlueprintName = 'Pods-KisarazuShelterMap'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_KisarazuShelterMap.framework'>

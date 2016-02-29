@@ -1,19 +1,19 @@
 PODS:
-  - SwiftCSV (0.2.2)
+  - CSwiftV (0.0.3)
 
 DEPENDENCIES:
-  - SwiftCSV (from `git@github.com:naoty/SwiftCSV.git`)
+  - CSwiftV (from `https://github.com/Daniel1of1/CSwiftV.git`)
 
 EXTERNAL SOURCES:
-  SwiftCSV:
-    :git: git@github.com:naoty/SwiftCSV.git
+  CSwiftV:
+    :git: https://github.com/Daniel1of1/CSwiftV.git
 
 CHECKOUT OPTIONS:
-  SwiftCSV:
-    :commit: a7f60376bd26a8c9c2212f4f752c65a935dc906d
-    :git: git@github.com:naoty/SwiftCSV.git
+  CSwiftV:
+    :commit: a1774b9dbae7b4d9fa288998362625cae9e12352
+    :git: https://github.com/Daniel1of1/CSwiftV.git
 
 SPEC CHECKSUMS:
-  SwiftCSV: 29106dc25a7eca542a80486ae7f0ee19ccd37b9f
+  CSwiftV: 93e3d4e1501f2a9b1eac3ae51d53a5edf41beb5b
 
 COCOAPODS: 0.39.0

@@ -4,6 +4,6 @@
 use_frameworks!
 
 target 'KisarazuShelterMap' do
-	pod 'SwiftCSV', git: 'git@github.com:naoty/SwiftCSV.git'
+	pod 'CSwiftV', git: 'https://github.com/Daniel1of1/CSwiftV.git'
 end
 

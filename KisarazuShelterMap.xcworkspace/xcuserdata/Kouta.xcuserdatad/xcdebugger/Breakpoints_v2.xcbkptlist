@@ -2,4 +2,69 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KisarazuShelterMap/ViewController.swift"
+            timestampString = "478455204.392522"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KisarazuShelterMap.ViewController.__deallocating_deinit"
+                  moduleName = "KisarazuShelterMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kouta/Documents/KisarazuShelterMap/KisarazuShelterMap/ViewController.swift"
+                  timestampString = "478455204.415542"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KisarazuShelterMap.ViewController.init (KisarazuShelterMap.ViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; KisarazuShelterMap.ViewController"
+                  moduleName = "KisarazuShelterMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kouta/Documents/KisarazuShelterMap/KisarazuShelterMap/ViewController.swift"
+                  timestampString = "478455204.415985"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "58">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KisarazuShelterMap.ViewController.init (KisarazuShelterMap.ViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;KisarazuShelterMap.ViewController&gt;"
+                  moduleName = "KisarazuShelterMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kouta/Documents/KisarazuShelterMap/KisarazuShelterMap/ViewController.swift"
+                  timestampString = "478455204.416196"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

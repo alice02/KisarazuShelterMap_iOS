@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-KisarazuShelterMap.xcscheme</key>
+		<key>CSwiftV.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SwiftCSV.xcscheme</key>
+		<key>Pods-KisarazuShelterMap.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6E915E82DAF06E68F4543CE92B7EEA3C</key>
+		<key>22A11D34623111A1EF355BE9755AB149</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F55990FF63756728A161448A78C1E721</key>
+		<key>C9289771C9E400167D4D291E44982A06</key>
 		<dict>
 			<key>primary</key>
 			<true/>
