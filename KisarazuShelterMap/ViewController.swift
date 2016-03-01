@@ -25,6 +25,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     // 避難場所の情報を格納する配列
     var shelter: [[String: String]] = []
     
+    // 一時避難場所の情報を格納する配列
+    var tempShelter: [[String: String]] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -53,14 +57,20 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             locationManager.requestWhenInUseAuthorization()
         }
         
-        // 即位開始
+        // 測位開始
         locationManager.startUpdatingLocation()
         
-        // hinan.csvを読み込み，配列shelterに格納
+        // 避難場所情報hinan.csvを読み込み，配列shelterに格納
         shelter = readCSV("hinan")
         
-        // shelterに格納された情報を元にピンを設置
-        setPins(shelter, pinColor: UIColor.blueColor())
+        // 一時避難場所情報ichijihinan.csvを読み込み，配列tempShelterに格納
+        tempShelter = readCSV("ichijihinan")
+        
+        // 避難場所にピンを設置（赤色）
+        setPins(shelter, pinColor: UIColor.redColor())
+
+        // 一時避難場所にピンを設置（緑色）
+        setPins(tempShelter, pinColor: UIColor.greenColor())
     }
 
     override func didReceiveMemoryWarning() {
