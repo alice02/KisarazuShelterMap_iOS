@@ -94,9 +94,9 @@
                                     <segue destination="BYZ-38-t0r" kind="push" id="coe-dz-4Au"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4c-gh-00H">
-                                <rect key="frame" x="90" y="277" width="420" height="30"/>
-                                <state key="normal" title="KisarazuShelterMap - Google Geo Corderで取得した緯度経度"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4c-gh-00H">
+                                <rect key="frame" x="96" y="277" width="408" height="30"/>
+                                <state key="normal" title="KisarazuShelterMap - Google Geocoderで取得した緯度経度"/>
                                 <connections>
                                     <segue destination="NTs-I2-nbI" kind="push" id="pe7-UV-XON"/>
                                 </connections>
