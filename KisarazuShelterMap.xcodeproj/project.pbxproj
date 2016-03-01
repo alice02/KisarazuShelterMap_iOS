@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0BF137C9777C459413775B51 /* Pods_KisarazuShelterMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E3BD7BBF66506B9FD15894 /* Pods_KisarazuShelterMap.framework */; };
+		122478991C854AE000A551FF /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122478981C854AE000A551FF /* MenuViewController.swift */; };
+		1224789B1C85509500A551FF /* ShelterMapViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224789A1C85509500A551FF /* ShelterMapViewController2.swift */; };
 		12D9BD1D1C843FA90021DFE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D9BD1C1C843FA90021DFE5 /* AppDelegate.swift */; };
-		12D9BD1F1C843FA90021DFE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D9BD1E1C843FA90021DFE5 /* ViewController.swift */; };
+		12D9BD1F1C843FA90021DFE5 /* ShelterMapViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D9BD1E1C843FA90021DFE5 /* ShelterMapViewController1.swift */; };
 		12D9BD221C843FA90021DFE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D9BD201C843FA90021DFE5 /* Main.storyboard */; };
 		12D9BD241C843FA90021DFE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12D9BD231C843FA90021DFE5 /* Assets.xcassets */; };
 		12D9BD271C843FA90021DFE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12D9BD251C843FA90021DFE5 /* LaunchScreen.storyboard */; };
@@ -20,9 +22,11 @@
 
 /* Begin PBXFileReference section */
 		01FF1942F160610836EC7FDA /* Pods-KisarazuShelterMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KisarazuShelterMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-KisarazuShelterMap/Pods-KisarazuShelterMap.release.xcconfig"; sourceTree = "<group>"; };
+		122478981C854AE000A551FF /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		1224789A1C85509500A551FF /* ShelterMapViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShelterMapViewController2.swift; sourceTree = "<group>"; };
 		12D9BD191C843FA90021DFE5 /* KisarazuShelterMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KisarazuShelterMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12D9BD1C1C843FA90021DFE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		12D9BD1E1C843FA90021DFE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		12D9BD1E1C843FA90021DFE5 /* ShelterMapViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelterMapViewController1.swift; sourceTree = "<group>"; };
 		12D9BD211C843FA90021DFE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12D9BD231C843FA90021DFE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12D9BD261C843FA90021DFE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,11 +82,13 @@
 				12D9BD2E1C84433C0021DFE5 /* hinan.csv */,
 				12D9BD301C8443410021DFE5 /* ichijihinan.csv */,
 				12D9BD1C1C843FA90021DFE5 /* AppDelegate.swift */,
-				12D9BD1E1C843FA90021DFE5 /* ViewController.swift */,
+				12D9BD1E1C843FA90021DFE5 /* ShelterMapViewController1.swift */,
+				1224789A1C85509500A551FF /* ShelterMapViewController2.swift */,
 				12D9BD201C843FA90021DFE5 /* Main.storyboard */,
 				12D9BD231C843FA90021DFE5 /* Assets.xcassets */,
 				12D9BD251C843FA90021DFE5 /* LaunchScreen.storyboard */,
 				12D9BD281C843FA90021DFE5 /* Info.plist */,
+				122478981C854AE000A551FF /* MenuViewController.swift */,
 				12D9BD341C84B6750021DFE5 /* ColorPointAnnotation.swift */,
 			);
 			path = KisarazuShelterMap;
@@ -222,9 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12D9BD1F1C843FA90021DFE5 /* ViewController.swift in Sources */,
+				12D9BD1F1C843FA90021DFE5 /* ShelterMapViewController1.swift in Sources */,
+				1224789B1C85509500A551FF /* ShelterMapViewController2.swift in Sources */,
 				12D9BD351C84B6750021DFE5 /* ColorPointAnnotation.swift in Sources */,
 				12D9BD1D1C843FA90021DFE5 /* AppDelegate.swift in Sources */,
+				122478991C854AE000A551FF /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

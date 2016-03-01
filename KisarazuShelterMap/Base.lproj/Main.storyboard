@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6a9-8L-d9W">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--避難場所マップ1-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KisarazuShelterMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ShelterMapViewController1" customModule="KisarazuShelterMap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -19,24 +19,120 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Du0-rn-Lbr">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Du0-rn-Lbr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="bnC-Sh-fi2"/>
+                            <constraint firstItem="Du0-rn-Lbr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="b5W-S2-edL"/>
                             <constraint firstItem="Du0-rn-Lbr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="frg-dM-t8H"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Du0-rn-Lbr" secondAttribute="bottom" id="j8e-sY-EwG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Du0-rn-Lbr" secondAttribute="trailing" constant="-20" id="x6b-ds-aBx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="避難場所マップ1" id="du2-nM-zhc">
+                        <barButtonItem key="backBarButtonItem" title="戻る" id="1Ra-lK-xgF"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="mapView" destination="Du0-rn-Lbr" id="VAP-0n-Glr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="389"/>
+            <point key="canvasLocation" x="1697" y="585"/>
+        </scene>
+        <!--避難場所マップ2-->
+        <scene sceneID="UMm-0N-pZB">
+            <objects>
+                <viewController id="NTs-I2-nbI" customClass="ShelterMapViewController2" customModule="KisarazuShelterMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0l3-8h-F2f"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z1O-gZ-S9r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WUI-30-czP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Hv-2C-oMS">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Hv-2C-oMS" secondAttribute="trailing" constant="-20" id="0me-t1-bbg"/>
+                            <constraint firstItem="7Hv-2C-oMS" firstAttribute="top" secondItem="0l3-8h-F2f" secondAttribute="bottom" id="Trx-w9-KiI"/>
+                            <constraint firstItem="7Hv-2C-oMS" firstAttribute="leading" secondItem="WUI-30-czP" secondAttribute="leadingMargin" constant="-20" id="jZB-UQ-Haw"/>
+                            <constraint firstItem="Z1O-gZ-S9r" firstAttribute="top" secondItem="7Hv-2C-oMS" secondAttribute="bottom" id="xEa-ez-7c9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="避難場所マップ2" id="tNc-yc-ALM"/>
+                    <connections>
+                        <outlet property="mapView" destination="7Hv-2C-oMS" id="pdk-NE-cf3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="590-RC-yXf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="1326"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="abd-Uj-ojf">
+            <objects>
+                <viewController id="NIj-9Q-vi8" customClass="MenuViewController" customModule="KisarazuShelterMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v7l-Fs-VCI"/>
+                        <viewControllerLayoutGuide type="bottom" id="czS-fw-sX1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mtk-gG-j2p">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yg6-We-ukP">
+                                <rect key="frame" x="141" y="189" width="318" height="30"/>
+                                <state key="normal" title="KisarazuShelterMap - 公開されている緯度経度"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="push" id="coe-dz-4Au"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4c-gh-00H">
+                                <rect key="frame" x="90" y="277" width="420" height="30"/>
+                                <state key="normal" title="KisarazuShelterMap - Google Geo Corderで取得した緯度経度"/>
+                                <connections>
+                                    <segue destination="NTs-I2-nbI" kind="push" id="pe7-UV-XON"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y4c-gh-00H" secondAttribute="trailing" constant="70" id="Mom-fa-ewr"/>
+                            <constraint firstItem="Y4c-gh-00H" firstAttribute="leading" secondItem="Mtk-gG-j2p" secondAttribute="leadingMargin" constant="70" id="O6L-nT-BF3"/>
+                            <constraint firstItem="yg6-We-ukP" firstAttribute="top" secondItem="v7l-Fs-VCI" secondAttribute="bottom" constant="125" id="U0l-1Q-ybw"/>
+                            <constraint firstItem="Y4c-gh-00H" firstAttribute="top" secondItem="yg6-We-ukP" secondAttribute="bottom" constant="58" id="V9A-QX-fwS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yg6-We-ukP" secondAttribute="trailing" constant="121" id="ZDS-Mv-KN1"/>
+                            <constraint firstItem="yg6-We-ukP" firstAttribute="leading" secondItem="Mtk-gG-j2p" secondAttribute="leadingMargin" constant="121" id="gAa-o3-Z5L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="b0y-Ue-2no"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAo-6M-y4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888" y="585"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8by-41-OgX">
+            <objects>
+                <navigationController id="6a9-8L-d9W" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pcI-oE-qGm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NIj-9Q-vi8" kind="relationship" relationship="rootViewController" id="MLB-RM-9oO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pnk-XE-rhN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94" y="585"/>
         </scene>
     </scenes>
 </document>

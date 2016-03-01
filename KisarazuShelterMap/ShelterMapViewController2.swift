@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  ShelterMapViewController2.swift
 //  KisarazuShelterMap
 //
-//  Created by Kouta on 2016/02/29.
+//  Created by Kouta on 2016/03/01.
 //  Copyright © 2016年 Kouta. All rights reserved.
 //
 
@@ -11,8 +11,8 @@ import MapKit
 import CoreLocation
 import CSwiftV
 
-class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-
+class ShelterMapViewController2: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+    
     // MapView
     @IBOutlet weak var mapView: MKMapView!
     
@@ -21,7 +21,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     
     // 最後に位置情報を更新した場所
     var lastLocation: CLLocationCoordinate2D?
-
+    
     // 避難場所の情報を格納する配列
     var shelter: [[String: String]] = []
     
@@ -35,7 +35,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         // 地図の中心を現在地にする
         mapView.setCenterCoordinate(mapView.userLocation.coordinate, animated: true)
-
+        
         // 現在地をマーキング
         mapView.userTrackingMode = MKUserTrackingMode.FollowWithHeading
         
@@ -68,11 +68,11 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         // 避難場所にピンを設置（赤色）
         setPins(shelter, pinColor: UIColor.redColor())
-
+        
         // 一時避難場所にピンを設置（緑色）
         setPins(tempShelter, pinColor: UIColor.greenColor())
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -110,7 +110,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             let myRegion: MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(location, 5000, 5000)
             mapView.setRegion(myRegion, animated: true)
         }
-
+        
     }
     
     // アノテーション（ピン）の表示に関する設定
@@ -171,7 +171,5 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             mapView.addAnnotation(pin)
         }
     }
-
+    
 }
-
-
