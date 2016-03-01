@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--避難場所マップ1-->
@@ -66,7 +67,20 @@
                             <constraint firstItem="Z1O-gZ-S9r" firstAttribute="top" secondItem="7Hv-2C-oMS" secondAttribute="bottom" id="xEa-ez-7c9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="避難場所マップ2" id="tNc-yc-ALM"/>
+                    <navigationItem key="navigationItem" title="避難場所マップ2" id="tNc-yc-ALM">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="GUK-Zm-3UR">
+                                <connections>
+                                    <action selector="adButton:" destination="NTs-I2-nbI" id="YQw-gC-fuI"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="GeC-fi-IIp">
+                                <connections>
+                                    <action selector="removeButton:" destination="NTs-I2-nbI" id="lHs-dD-15Y"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="7Hv-2C-oMS" id="pdk-NE-cf3"/>
                     </connections>
@@ -94,7 +108,7 @@
                                     <segue destination="BYZ-38-t0r" kind="push" id="coe-dz-4Au"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4c-gh-00H">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4c-gh-00H">
                                 <rect key="frame" x="96" y="277" width="408" height="30"/>
                                 <state key="normal" title="KisarazuShelterMap - Google Geocoderで取得した緯度経度"/>
                                 <connections>
@@ -104,8 +118,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Y4c-gh-00H" secondAttribute="trailing" constant="70" id="Mom-fa-ewr"/>
-                            <constraint firstItem="Y4c-gh-00H" firstAttribute="leading" secondItem="Mtk-gG-j2p" secondAttribute="leadingMargin" constant="70" id="O6L-nT-BF3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y4c-gh-00H" secondAttribute="trailing" constant="76" id="Mom-fa-ewr"/>
+                            <constraint firstItem="Y4c-gh-00H" firstAttribute="leading" secondItem="Mtk-gG-j2p" secondAttribute="leadingMargin" constant="76" id="O6L-nT-BF3"/>
                             <constraint firstItem="yg6-We-ukP" firstAttribute="top" secondItem="v7l-Fs-VCI" secondAttribute="bottom" constant="125" id="U0l-1Q-ybw"/>
                             <constraint firstItem="Y4c-gh-00H" firstAttribute="top" secondItem="yg6-We-ukP" secondAttribute="bottom" constant="58" id="V9A-QX-fwS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yg6-We-ukP" secondAttribute="trailing" constant="121" id="ZDS-Mv-KN1"/>

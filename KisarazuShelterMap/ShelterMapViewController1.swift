@@ -28,6 +28,10 @@ class ShelterMapViewController1: UIViewController, MKMapViewDelegate, CLLocation
     // 一時避難場所の情報を格納する配列
     var tempShelter: [[String: String]] = []
     
+    // 避難場所と一時避難場所を表す識別子
+    let shelterId = "SHELTER"
+    let tempShelterId = "TEMPSHELTER"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,13 +70,13 @@ class ShelterMapViewController1: UIViewController, MKMapViewDelegate, CLLocation
         // 一時避難場所情報ichijihinan.csvを読み込み，配列tempShelterに格納
         tempShelter = readCSV("ichijihinan")
         
-        // 避難場所にピンを設置（赤色）
-        setPins(shelter, pinColor: UIColor.redColor())
+        // 避難場所にピンを設置
+        setPins(shelter, id: shelterId)
 
-        // 一時避難場所にピンを設置（緑色）
-        setPins(tempShelter, pinColor: UIColor.greenColor())
+        // 一時避難場所にピンを設置
+        setPins(tempShelter, id: tempShelterId)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -115,20 +119,38 @@ class ShelterMapViewController1: UIViewController, MKMapViewDelegate, CLLocation
     
     // アノテーション（ピン）の表示に関する設定
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        // 現在地のマークは変更しない
         if annotation is MKUserLocation {
             return nil
         }
         
-        let reuseId = "pin"
+        // 避難場所なのか一時避難場所なのかを判定
+        let colorPointAnnotation = annotation as! ColorPointAnnotation
+        let reuseId = colorPointAnnotation.id
+        
+        // reuseIdをもとにpinViewを取得
         var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+        // まだピンがなかったらピンを立てる
         if pinView == nil {
             pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
             
-            let colorPointAnnotation = annotation as! ColorPointAnnotation
-            pinView?.pinTintColor = colorPointAnnotation.pinColor
+            // idで色分け
+            switch reuseId {
+                // 避難場所は赤いピン
+            case shelterId:
+                pinView?.pinTintColor = UIColor.redColor()
+                // 一時避難場所は緑のピン
+            case tempShelterId:
+                pinView?.pinTintColor = UIColor.greenColor()
+            default:
+                break
+            }
+            // アニメーションを付加
             pinView?.animatesDrop = true
+            // ピンをタップした時にCalloutを表示
             pinView?.canShowCallout = true
         }
+            // すでにピンが立っていたら再利用
         else {
             pinView?.annotation = annotation
         }
@@ -155,13 +177,13 @@ class ShelterMapViewController1: UIViewController, MKMapViewDelegate, CLLocation
     }
     
     // ピンを表示する
-    func setPins(points: [[String: String]], pinColor: UIColor) {
+    func setPins(points: [[String: String]], id: String) {
         for point in points {
             // 配列から緯度経度を抽出
             let lat = NSString(string: point["latitude"]!).doubleValue
             let lng = NSString(string: point["longitude"]!).doubleValue
             // ピンのインスタンスを生成
-            let pin = ColorPointAnnotation(pinColor: pinColor)
+            let pin = ColorPointAnnotation(id: id)
             // ピンの座標を設定
             pin.coordinate = CLLocationCoordinate2DMake(lat, lng)
             // ピンをタップした時に表示されるもの

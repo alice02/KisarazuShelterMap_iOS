@@ -9,10 +9,10 @@ import UIKit
 import MapKit
 
 class ColorPointAnnotation: MKPointAnnotation {
-    var pinColor: UIColor
+    var id: String
     
-    init(pinColor: UIColor) {
-        self.pinColor = pinColor
+    init(id: String) {
+        self.id = id
         super.init()
     }
 }
