@@ -66,5 +66,84 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KisarazuShelterMap/ShelterMapViewController1.swift"
+            timestampString = "479621997.960197"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ShelterMapViewController1"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KisarazuShelterMap.ShelterMapViewController1.__deallocating_deinit"
+                  moduleName = "KisarazuShelterMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kouta/Documents/KisarazuShelterMap/KisarazuShelterMap/ShelterMapViewController1.swift"
+                  timestampString = "479628051.476427"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KisarazuShelterMap.ShelterMapViewController1.init (KisarazuShelterMap.ShelterMapViewController1.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; KisarazuShelterMap.ShelterMapViewController1"
+                  moduleName = "KisarazuShelterMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kouta/Documents/KisarazuShelterMap/KisarazuShelterMap/ShelterMapViewController1.swift"
+                  timestampString = "479628051.476706"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "KisarazuShelterMap.ShelterMapViewController1.init (KisarazuShelterMap.ShelterMapViewController1.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;KisarazuShelterMap.ShelterMapViewController1&gt;"
+                  moduleName = "KisarazuShelterMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kouta/Documents/KisarazuShelterMap/KisarazuShelterMap/ShelterMapViewController1.swift"
+                  timestampString = "479628051.47691"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KisarazuShelterMap/ShelterMapViewController2.swift"
+            timestampString = "479627768.415294"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "searchDirection(_:to:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

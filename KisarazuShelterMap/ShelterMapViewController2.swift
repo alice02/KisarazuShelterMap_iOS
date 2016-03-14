@@ -15,19 +15,7 @@ class ShelterMapViewController2: UIViewController, MKMapViewDelegate, CLLocation
     
     // MapView
     @IBOutlet weak var mapView: MKMapView!
-    
-    @IBAction func adButton(sender: AnyObject) {
-        // 避難場所にピンを設置（赤色）
-        setPins(shelter, id: self.shelterId)
-        // 一時避難場所にピンを設置（緑色）
-        setPins(tempShelter, id: self.tempShelterId)
-    }
-    
-    @IBAction func removeButton(sender: AnyObject) {
-        let allAnnotations = self.mapView.annotations
-        self.mapView.removeAnnotations(allAnnotations)
-    }
-    
+        
     // LocationManager
     let locationManager = CLLocationManager()
     
@@ -80,6 +68,11 @@ class ShelterMapViewController2: UIViewController, MKMapViewDelegate, CLLocation
         
         // 一時避難場所情報ichijihinan.csvを読み込み，配列tempShelterに格納
         tempShelter = readCSV("new_ichijihinan")
+
+        // 避難場所にピンを設置（赤色）
+        setPins(shelter, id: self.shelterId)
+        // 一時避難場所にピンを設置（緑色）
+        setPins(tempShelter, id: self.tempShelterId)
         
     }
     
@@ -156,6 +149,8 @@ class ShelterMapViewController2: UIViewController, MKMapViewDelegate, CLLocation
             pinView?.animatesDrop = true
             // ピンをタップした時にCalloutを表示
             pinView?.canShowCallout = true
+
+            pinView?.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure) as UIView
         }
         // すでにピンが立っていたら再利用
         else {
@@ -165,7 +160,12 @@ class ShelterMapViewController2: UIViewController, MKMapViewDelegate, CLLocation
         return pinView
     }
     
-
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let annotation = view.annotation as! ColorPointAnnotation
+        searchDirection(lastLocation!, to: annotation.coordinate)
+        print(annotation.title)
+    }
+    
     // CSVファイルを読み込みディクショナリ形式で返す
     func readCSV(fileName: String) -> [[String: String]] {
         if let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "csv") {
@@ -202,6 +202,57 @@ class ShelterMapViewController2: UIViewController, MKMapViewDelegate, CLLocation
             pins.append(pin)
         }
         mapView.addAnnotations(pins)
+    }
+    
+    // 経路を探索する
+    func searchDirection(from :CLLocationCoordinate2D, to :CLLocationCoordinate2D) {
+        // 現在地と目的地のMKPlacemarkを生成
+        let fromPlacemark = MKPlacemark(coordinate: from, addressDictionary: nil)
+        let toPlacemark = MKPlacemark(coordinate: to, addressDictionary: nil)
+        
+        // MKPlacemarkからMKMapItemを生成
+        let fromItem = MKMapItem(placemark: fromPlacemark)
+        let toItem = MKMapItem(placemark: toPlacemark)
+        
+        // MKMapItemをセットしてMKDirectionsRequestを生成
+        let request = MKDirectionsRequest()
+        request.source = fromItem
+        request.destination = toItem
+        request.requestsAlternateRoutes = true // 複数のルートを許可
+        request.transportType = MKDirectionsTransportType.Walking //徒歩のルートを検索
+
+        let directions: MKDirections = MKDirections(request: request)
+        
+        directions.calculateDirectionsWithCompletionHandler{ response, error in
+            guard let response = response else {
+                return
+            }
+
+            let route: MKRoute = response.routes[0] as MKRoute
+            print("目的地まで \(route.distance) m")
+            print("所要時間 \(route.expectedTravelTime/60)分")
+            
+            // すでに経路が表示されていたら削除する
+            let allOverlays = self.mapView.overlays
+            self.mapView.removeOverlays(allOverlays)
+            
+            // 経路を表示
+            self.mapView.addOverlay(route.polyline)
+        }
+    }
+    
+    // ルートの表示設定.
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        
+        let route: MKPolyline = overlay as! MKPolyline
+        let routeRenderer: MKPolylineRenderer = MKPolylineRenderer(polyline: route)
+        
+        // ルートの線の太さ.
+        routeRenderer.lineWidth = 5.0
+        
+        // ルートの線の色.
+        routeRenderer.strokeColor = UIColor.redColor()
+        return routeRenderer
     }
     
 }
